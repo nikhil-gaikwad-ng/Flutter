@@ -1,0 +1,86 @@
+ package-- easy_stepper: ^0.6.0
+
+import 'package:easy_stepper/easy_stepper.dart';
+//////////////////////////////////////////////////////
+
+
+
+
+
+
+
+
+
+
+
+    EasyStepper(
+                    activeStep: activeStep,
+                    lineLength: 70,
+                    // lineSpace: 0,
+                    lineType: LineType.normal,
+                    defaultLineColor: Colors.white,
+                    finishedStepBackgroundColor: Colors.transparent,
+                    finishedLineColor: Colors.green,
+                    activeStepTextColor: Colors.transparent,
+                    finishedStepTextColor: Colors.black87,
+                    unreachedStepTextColor: Colors.black,
+                    lineThickness: 1.3,
+                    internalPadding: 0,
+                    showLoadingAnimation: false,
+                    stepRadius: 25,
+                    showStepBorder: false,
+                    steps: [
+                      EasyStep(
+                        customStep: Container(
+                          decoration: BoxDecoration(
+                              border: Border.all(color: Colors.white, width: 2),
+                              borderRadius:
+                                  const BorderRadius.all(Radius.circular(25))),
+                          child: CircleAvatar(
+                            radius: 25,
+                            backgroundColor: activeStep == 0
+                                ? Colors.white
+                                : Colors.transparent,
+                            child: const Text(
+                              "1",
+                              style: TextStyle(
+                                  fontSize: 20, fontWeight: FontWeight.bold),
+                            ),
+                          ),
+                        ),
+                      ),
+                      EasyStep(
+                        customStep: Container(
+                          decoration: BoxDecoration(
+                              border: Border.all(color: Colors.white, width: 2),
+                              borderRadius:
+                                  const BorderRadius.all(Radius.circular(25))),
+                          child: CircleAvatar(
+                            radius: 22,
+                            backgroundColor: activeStep == 1
+                                ? Colors.white
+                                : Colors.transparent,
+                            child: const Text("2"),
+                          ),
+                        ),
+                      ),
+                      EasyStep(
+                        customStep: Container(
+                          decoration: BoxDecoration(
+                              border: Border.all(color: Colors.white, width: 2),
+                              borderRadius:
+                                  const BorderRadius.all(Radius.circular(25))),
+                          child: CircleAvatar(
+                            radius: 22,
+                            backgroundColor: activeStep == 2
+                                ? Colors.white
+                                : Colors.transparent,
+                            child: const Text("3"),
+                          ),
+                        ),
+                      ),
+                    ],
+                    onStepReached: (index) =>
+                        setState(() => activeStep = index),
+                  ),
+              
