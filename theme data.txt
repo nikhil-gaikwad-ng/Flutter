@@ -1,0 +1,31 @@
+import 'package:ampergia_app/util/colors.dart';
+import 'package:flutter/material.dart';
+
+final themeData = ThemeData(
+  iconTheme: const IconThemeData(color: CustomeColors.iconColor),
+  appBarTheme: AppBarTheme(
+    iconTheme: IconThemeData(
+      color: CustomeColors.iconColorBlack,
+    ),
+    color: CustomeColors.kcGrayBackground,
+    elevation: 0,
+  ),
+  iconButtonTheme: IconButtonThemeData(
+    style: ButtonStyle(
+        iconColor: MaterialStateProperty.all(CustomeColors.iconColorBlack),
+        backgroundColor: MaterialStateProperty.all(Colors.amber)),
+  ),
+  scaffoldBackgroundColor: CustomeColors.kcGrayBackground,
+  primarySwatch: const MaterialColor(0xFFD81DB1, {
+    50: Color(0xFFD50DB1),
+    100: Color(0xFFD100B1),
+    200: Color(0xFFD200B1),
+    300: Color(0xFFD300B1),
+    400: Color(0xFFD400B1),
+    500: Color(0xFFD500B1),
+    600: Color(0xFFD600B1),
+    700: Color(0xFFD700B1),
+    800: Color(0xFFD800B1),
+    900: Color(0xFFD900B1)
+  }),
+);
