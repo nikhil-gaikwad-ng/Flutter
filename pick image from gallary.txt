@@ -1,0 +1,13 @@
+manifest file:-
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.MANAGE_EXTERNAL_STORAGE"/>
+
+
+yamal file:-
+  image_picker: ^0.8.7+5
+
+
+
+code-
+        await ImagePicker.platform.getImage(source: ImageSource.gallery);
